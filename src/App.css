@@ -1,181 +1,205 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html,
 body {
-	height: 100vh;
-	width: 100vw;
-	overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 .ui.container {
-	overflow-y: scroll;
-	position: relative;
-	max-height: 70vh;
+  position: relative;
+  max-height: 70vh;
+  overflow-y: scroll;
 }
 
 .ui.container::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .App {
-	text-align: center;
-	align-items: center;
+  text-align: center;
+  align-items: center;
 }
 .ui.form {
-	position: fixed;
-	margin: auto;
-	z-index: 20;
-	width: 100%;
-	background: white;
-	padding-left: 6.5%;
-	padding-right: 5%;
-	padding-bottom: 10px;
-	border-bottom: 1px solid rgba(0, 0, 0, .2);
+  position: fixed;
+  margin: auto;
+  z-index: 20;
+  width: 100%;
+  background: white;
+  padding-left: 6.5%;
+  padding-right: 5%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .ui.large.button {
-	margin: .5%;
+  margin: 0.5%;
 }
 
 .ui.form button {
-	margin: 1%;
+  margin: 1%;
 }
 
 .ui.form.comments {
-	position: relative;
+  position: relative;
 }
 i.icon,
 i.icons {
-	font-size: 1em;
-	margin: 10px 0;
+  font-size: 1em;
+  margin: 10px 0;
 }
 h4 {
-	margin-top: 0;
+  margin-top: 0;
 }
 .ui.form .fields {
-	width: 1127px;
-	margin: auto;
+  width: 1127px;
+  margin: auto;
 }
 .ui.form.comments button {
-	background: rgba(0, 0, 0, .1);
-	padding: 10px;
-	border-radius: 5px;
-	border: none;
-	font-size: 12px;
-	color: rgba(0, 0, 0, .5);
-	font-weight: bold;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 .ui.form.logout button {
-	text-align: center;
-	margin-bottom: 5%;
+  text-align: center;
+  margin-bottom: 5%;
 }
 
 .ui.small.button {
-	margin: .5%;
+  margin: 0.5%;
 }
 
 .style.head {
-	font-family: sans-serif;
-	font-size: 20px;
-	font-weight: bold;
-	padding: 10px;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
 }
 .ui.mini.button {
-	font-size: 10pt;
+  font-size: 10pt;
 }
 
+.three.wide.field.water-type {
+  margin-top: -18px;
+}
+.ui.three.cards,
+.ui.two.cards {
+  margin-top: 10px;
+}
+.ui.container > .ui.two.cards {
+  overflow: hidden;
+}
 #main_head h1 {
-	font-family: 'Monofett', cursive;
-	font-size: 70px;
-	line-height: 80%;
-	letter-spacing: .025em;
-	margin: 3% 0 3% 0;
+  font-family: 'Monofett', cursive;
+  font-size: 70px;
+  line-height: 80%;
+  letter-spacing: 0.025em;
+  margin: 3% 0 3% 0;
 }
 
 .ui.button:hover {
-	color: #40e0d0;
+  color: #40e0d0;
 }
 
 .ui.form button:hover {
-	color: #40e0d0;
+  color: #40e0d0;
 }
 
 .ui.four.cards {
-	margin: 0;
+  margin: 0;
 }
 hr {
-	border-top: 1px;
-	color: #141414;
+  border-top: 1px;
+  color: #141414;
+}
+
+@media (max-width: 1200px) {
+  .ui.form .fields {
+    flex-wrap: wrap !important;
+    width: 800px;
+  }
 }
 
 @media (max-width: 800px) {
-	.ui.form {
-		width: 100%;
-		padding: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 0;
-		height: 100px;
-		margin-top: -10px;
-		scroll-snap-points-y: ;
-	}
-	.ui.two.cards {
-		margin: 20px;
-	}
-	.ui.form .fields {
-		width: 700px;
-		margin: auto;
-	}
-	.ui.cards {
-		margin: 0;
-	}
-	.ui.container {
-		max-height: 75vh;
-	}
-	.ui.form.comments {
-		z-index: 1;
-	}
+  .ui.form {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100px;
+    margin-top: -10px;
+  }
+  .ui.two.cards {
+    margin: 20px;
+  }
+  .ui.form .fields {
+    width: 650px;
+    margin: auto;
+  }
+  .ui.cards {
+    margin: 0;
+  }
+  .ui.container {
+    max-height: 75vh;
+  }
+  .ui.form.comments {
+    z-index: 1;
+  }
+  .ui.form select {
+    padding: 0.062em 0em !important;
+    height: 38px;
+  }
 }
-@media (max-width: 500px) {
-	.ui.container {
-		margin-bottom: 50px;
-		max-height: 64vh;
-	}
-	.ui.cards {
-		margin: 0 20px;
-	}
-	.ui.two.cards {
-		margin: 0;
-	}
-	.ui.form {
-		height: 260px;
-		margin-top: -10px;
-	}
-	.ui.form .fields {
-		width: 350px;
-	}
 
-	.three.wide.field {
-		padding-bottom: 10px;
-	}
-	.two.wide.field {
-		margin-bottom: 30px;
-	}
-	.ui.mini.button {
-		margin-bottom: 30px;
-	}
-	.ui.form.comments {
-		position: relative;
-		height: 100%;
-	}
-	.ui.form.comments input,
-	.ui.form.comments button {
-		margin-bottom: 20px;
-	}
-	.content .ui.mini.button {
-		margin-bottom: 0;
-	}
+@media (max-width: 500px) {
+  .ui.container {
+    margin-bottom: 50px;
+    max-height: 64vh;
+  }
+  .ui.cards {
+    margin: 0 20px;
+  }
+  .ui.two.cards {
+    margin: 0;
+  }
+  .ui.form {
+    height: 260px;
+    margin-top: -10px;
+  }
+  .ui.form .fields {
+    width: 350px;
+  }
+
+  .three.wide.field {
+    padding-bottom: 10px;
+  }
+  .three.wide.field.water-type {
+    margin-top: 5px;
+  }
+  .two.wide.field {
+    margin-bottom: 30px;
+  }
+  .ui.mini.button {
+    margin-bottom: 30px;
+  }
+  .ui.form.comments {
+    position: relative;
+    height: 100%;
+  }
+  .ui.form.comments input,
+  .ui.form.comments button {
+    margin-bottom: 20px;
+  }
+  .content .ui.mini.button {
+    margin-bottom: 0;
+  }
 }

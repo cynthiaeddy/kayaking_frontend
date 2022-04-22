@@ -1,59 +1,46 @@
 import React from 'react'
 import Word from './Word'
-import {Card} from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 
 class Words extends React.Component {
-
   constructor(props) {
     super()
 
     this.state = {
-      width: window.innerWidth
+      width: window.innerWidth,
     }
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.handleWindowSizeChange);
+    window.addEventListener('resize', this.handleWindowSizeChange)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.handleWindowSizeChange);
+    window.removeEventListener('resize', this.handleWindowSizeChange)
   }
 
   handleWindowSizeChange = () => {
-    this.setState({width: window.innerWidth});
+    this.setState({ width: window.innerWidth })
   }
 
-    renderWords (words){
-      return words.map((word) => <Word key={word.id} word={word}/>)
-    }
+  renderWords(words) {
+    return words.map((word) => <Word key={word.id} word={word} />)
+  }
 
-    render() {
-
-    console.log('props',this.state, this.props.words)
-    let isMobile
+  render() {
+    console.log('props', this.state, this.props.words)
     let width = this.state.width
-    width <= 500
-      ? isMobile = true
-      : isMobile = false
+    let isMobile
+    width <= 500 ? (isMobile = true) : (isMobile = false)
 
     let isTablet
-    width = this.state.width
-    width <= 900
-      ? isTablet = true
-      : isTablet = false
+    width <= 900 ? (isTablet = true) : (isTablet = false)
 
     let isLaptop
-    width = this.state.width
-    width <= 1200
-      ? isLaptop = true
-      : isLaptop = false
+    width <= 1200 ? (isLaptop = true) : (isLaptop = false)
 
     let isDesktop
-    width = this.state.width
-    width <= 1800
-      ? isDesktop = true
-      : isDesktop = false
+    width <= 1800 ? (isDesktop = true) : (isDesktop = false)
 
     let itemsPerRow
     if (isMobile) {
@@ -69,7 +56,8 @@ class Words extends React.Component {
     return (
       <Card.Group itemsPerRow={itemsPerRow}>
         {this.renderWords(this.props.words)}
-    </Card.Group >)
+      </Card.Group>
+    )
   }
 }
 
